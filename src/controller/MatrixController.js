@@ -3,7 +3,7 @@ const fs = require('fs');
 const csv = require('csv-parser');
 
 function MatrixController(req, res){
-    const validOps = ['multiply', 'sum', 'invert', 'flatten'];
+    const validOps = ['multiply', 'sum', 'invert', 'flatten', 'echo'];
     if (!req.query.op || !validOps.includes(req.query.op) || !req.file) {
         return res.status(400).send({errors: 'Invalid or missing parameters'});
     }

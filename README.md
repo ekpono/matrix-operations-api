@@ -16,9 +16,9 @@ Send a POST request to the /echo endpoint with a CSV file attached and the desir
 
 <h2>Example Request</h2>
 ````
-curl -X POST \
--F "file=@/path/to/your/file.csv" \
-http://localhost:8080/echo?op=invert
+curl -X POST http://127.0.0.1:8080/echo\?op\=invert 
+    -H "Content-Type: multipart/form-data" 
+    -F file=@path/to/your/file.csv
 ````
 
 <h2>Available Operations</h2>
